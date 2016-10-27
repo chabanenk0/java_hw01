@@ -7,6 +7,7 @@ public class Main
 {
     public static void main(String[] args) {
         TelephoneReader reader = new TelephoneReader();
+        TelephoneProcessor processor = new TelephoneProcessor();
         String number;
         try {
             number = reader.readTelephoneNumber();
@@ -14,6 +15,7 @@ public class Main
             e.printStackTrace();
             return;
         }
-        System.out.println("You've entered:" + number);
+        String result = processor.process(number);
+        System.out.println("Final result is:" + result);
     }
 }
