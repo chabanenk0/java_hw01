@@ -1,6 +1,7 @@
 import org.junit.Test;
 
-import static junit.framework.Assert.*;
+import static org.junit.Assert.*;
+
 
 /**
  * Created by dmitry on 26.10.16.

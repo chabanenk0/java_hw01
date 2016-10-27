@@ -1,22 +1,19 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
- * Main class for telephone number processor
+ * Created by dmitry on 27.10.16.
  */
-public class Main {
+public class Main
+{
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String inputString;
-
-        System.out.println("Enter your telephone number: ");
+        TelephoneReader reader = new TelephoneReader();
+        String number;
         try {
-            inputString = br.readLine();
+            number = reader.readTelephoneNumber();
         } catch (IOException e) {
             e.printStackTrace();
             return;
         }
-        System.out.println("your input is:" + inputString);
+        System.out.println("You've entered:" + number);
     }
 }
